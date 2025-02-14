@@ -1,5 +1,5 @@
 import { useState } from "react";
-import Pageheader from "../header/Pageheader.jsx/Pageheader";
+import Pageheader from "../header/Pageheader";
 import { useEffect } from "react";
 import axios from "axios";
 
@@ -40,7 +40,7 @@ function Flightlist() {
                             <td className="text-primary">{flight.airline_name}</td>
                             <td>{flight.source}</td>
                             <td>{flight.destination}</td>
-                            <td><a href={`/flights/edit/${flight.id}` }className="btn btn-warning">edit</a>
+                            <td><a href="/flights/edit/$(flight.id)" className="btn btn-warning">edit</a>
                                 <button className="btn btn-danger">delete</button></td>
                         </tr>
                         );
